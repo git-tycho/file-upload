@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <form>
+      <form [formGroup]="form">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" #name name="name" id="name" />
+          <input type="text" class="form-control" formControlName="name"
+                 name="name" id="name" />
           <label for="email">Email</label>
-          <input type="text" class="form-control" name="email" />
+          <input type="text" class="form-control" name="email" formControlName="email"/>
           <label for="multiple">Resume</label>
-          <input type="file" class="form-control" name="multiple" ng2FileSelect [uploader]="uploader" multiple />
+          <input type="file" class="form-control" name="multiple" ng2FileSelect [uploader]="uploader" multiple formControlName="file" />
         </div>
       </form>
       <table class="table">
